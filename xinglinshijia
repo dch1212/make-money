@@ -1,4 +1,10 @@
-curl -H 'Host: bp-api.bjzsdf.com' -H 'Cache-Control: no-cache' -H 'caid: cdb471a8def1d4ecb91b22b2930276b3' -H 'User-Agent: xinglinshijia-mobile/2 CFNetwork/1402.0.8 Darwin/22.2.0' -H 'bs: CDMA' -H 'brand: Apple' -H 'channel: AppStore' -H 'hotVersion: 1.14' -H 'appVersion: 1.0.0' -H 'pkgId: 698' -H 'romVersion: iOS16.20' -H 'wechatId: ' -H 'os: iOS' -H 'accessKey: 3329dfcff6c113a76f2693ce2cd4d0c8_1805715945' -H 'deviceId: 0000-0000-0000-0000' -H 'oaid: ' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: iPhone15,2' -H 'osVersion: iOS16.20' -H 'blackBox: ' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary '{"desc":"红包来源场景_2000","redBagIncrease":2000,"sign":"RehYYA08HXe5Mx8FbnGywc4NkALZtPD7w+rjsgIPKJveh74vZ7zXCUW9cv9SI/S2q4vQ8RXhc2j4Z9fzfiwipg=="}' --compressed 'http://bp-api.bjzsdf.com/bubuduo-xlsj/game/add/red/bag'
-
-https://juejin.cn/post/7270078493915676707
-
+sum=1709992489000
+for i in {1..10}
+do
+  sum=$((sum + 5))
+  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709992398s.rlbz6.shop' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed 'https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=086d6151516e028a36d78f521c6be7f2&time=13&timestamp=1709993986000'
+  sleep 1
+  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709992398s.rlbz6.shop' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed 'https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=086d6151516e028a36d78f521c6be7f2&time=1709993987000&psgn=d9c0b3bb2662069f597c5a8e7582603b&v=3.0'
+  sleep 8
+  echo $sum
+done
