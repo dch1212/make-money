@@ -1,7 +1,6 @@
-
 timestamp=`expr $(date +%s)`
 timestamp=$((timestamp * 1000))
-for i in {1..54}
+for i in {1..29}
 do
   random=`expr $RANDOM % 10 + 8`
   random1=$((random + 1))
@@ -9,39 +8,17 @@ do
   timestamp=$((timestamp + $random * 1000))
   timestamp1=$((timestamp + $random * 1000 + 1000))
   echo "现在时间$timestamp"
+  uk='4e14bbf59be1fc74162862d6d6550334'
+  origin='http://t1710000318s.varylc.top'
 
-  aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=7f9af27fb4d594b664998c1f6d5a4524&time=${timestamp}&psgn=3a2d4ac45b68bc52efe34123040d188e&v=3.0"
-  bb="https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=7f9af27fb4d594b664998c1f6d5a4524&time=${random1}&timestamp=${timestamp1}'"
+  aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=${uk}&time=${timestamp}&psgn=3a2d4ac45b68bc52efe34123040d188e&v=3.0"
+  bb="https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=${uk}&time=${random1}&timestamp=${timestamp1}'"
 
-  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709998175s.fileserver.top' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $aa
+  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: "'"${origin}"'"' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $aa
+
   sleep 8
-  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709998175s.fileserver.top' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $bb
 
-  sleep 1
-  echo "已循环${i}次"
-done
-
-
-
-
-
-timestamp=`expr $(date +%s)`
-timestamp=$((timestamp * 1000))
-for i in {1..54}
-do
-  random=`expr $RANDOM % 10 + 8`
-  random1=$((random + 1))
-  echo $random
-  timestamp=$((timestamp + $random * 1000))
-  timestamp1=$((timestamp + $random * 1000 + 1000))
-  echo "现在时间$timestamp"
-
-  aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=f16c392c6d30f2f35661dfa6d3cb7b65&time=${timestamp}&psgn=3a2d4ac45b68bc52efe34123040d188e&v=3.0"
-  bb="https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=f16c392c6d30f2f35661dfa6d3cb7b65&time=${random1}&timestamp=${timestamp1}'"
-
-  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1710000318s.gtbx3.shop' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $aa
-  sleep 8
-  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1710000318s.gtbx3.shop' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $bb
+  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: "'"${origin}"'"' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $bb
 
   sleep 1
   echo "已循环${i}次"
