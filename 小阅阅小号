@@ -15,4 +15,5 @@ do
   sleep 8
   curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709997232s.gongying.online' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $bb
   sleep 1
+  echo "已循环${i}次"
 done
