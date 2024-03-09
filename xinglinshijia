@@ -1,10 +1,18 @@
-sum=1709992489000
-for i in {1..10}
+timestamp=`expr $(date +%s)`
+timestamp=$((timestamp * 1000))
+for i in {1..54}
 do
-  sum=$((sum + 5))
-  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709992398s.rlbz6.shop' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed 'https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=086d6151516e028a36d78f521c6be7f2&time=13&timestamp=1709993986000'
-  sleep 1
-  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709992398s.rlbz6.shop' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed 'https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=086d6151516e028a36d78f521c6be7f2&time=1709993987000&psgn=d9c0b3bb2662069f597c5a8e7582603b&v=3.0'
+  random=`expr $RANDOM % 10 + 8`
+  random1=$((random + 1))
+  echo $random
+  timestamp=$((timestamp + $random * 1000))
+  timestamp1=$((timestamp + $random * 1000 + 1000))
+  echo "现在时间$timestamp"
+  aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=cedfcae4e7c242fbf8e662918c755633&time=${timestamp}&psgn=d9c0b3bb2662069f597c5a8e7582603b&v=3.0"
+  bb="https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=cedfcae4e7c242fbf8e662918c755633&time=${random1}&timestamp=${timestamp1}"
+  
+  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709997232s.gongying.online' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $aa
   sleep 8
-  echo $sum
+  curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1709997232s.gongying.online' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $bb
+  sleep 1
 done
