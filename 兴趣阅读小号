@@ -1,2 +1,39 @@
-    response=$(curl -H 'Host: api2.wanjd.cn' -H 'accept: */*' -H 'content-type: application/x-www-form-urlencoded' -H 'origin: http://wxread-a-6831703-freeggjjdddrdtyy.cos.com.freeggjjdddrdtyy.homes' -H 'accept-language: zh-CN,zh-Hans;q=0.9' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'referer: http://wxread-a-6831703-freeggjjdddrdtyy.cos.com.freeggjjdddrdtyy.homes/' --data-binary "href=http%3A%2F%2Fwxread-a-6831703-freeggjjdddrdtyy.cos.com.freeggjjdddrdtyy.homes%2Fmyindex.html%3Fb4873995060ba917b79f074097e240f0" --compressed 'https://api2.wanjd.cn/wxread/articles/tasks'）
-    echo $response
+timestamp=`expr $(date +%s)`
+timestamp=$((timestamp * 1000))
+function get_json_value()
+{
+  local json=$1
+  local key=$2
+echo $1
+  if [[ -z "$3" ]]; then
+    local num=1
+  else
+    local num=$3
+  fi
+
+  local value=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${key}'\042/){print $(i+1)}}}' | tr -d '"' | sed -n ${num}p)
+
+  echo ${value}
+}
+# response=$(curl -H 'Host: api2.wanjd.cn' -H 'accept: */*' -H 'content-type: application/x-www-form-urlencoded' -H 'origin: http://wxread-a-6833897-khgfdxonline3.cos.com.khgfdxonline.homes' -H 'accept-language: zh-CN,zh-Hans;q=0.9' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'referer: http://wxread-a-6833897-khgfdxonline3.cos.com.khgfdxonline.homes/' --data-binary "href=http%3A%2F%2Fwxread-a-6833897-khgfdxonline3.cos.com.khgfdxonline.homes%2Fmyindex.html%3F4f0f24a75a7fc3c60784f00540974823" --compressed 'https://api2.wanjd.cn/wxread/articles/tasks')
+get_json_value $(curl -H 'Host: api2.wanjd.cn' -H 'accept: */*' -H 'content-type: application/x-www-form-urlencoded' -H 'origin: http://wxread-a-6835995-jggfjvjad.cos.com.jggfjvjad.homes' -H 'accept-language: zh-CN,zh-Hans;q=0.9' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'referer: http://wxread-a-6835995-jggfjvjad.cos.com.jggfjvjad.homes/' --data-binary "href=http%3A%2F%2Fwxread-a-6835995-jggfjvjad.cos.com.jggfjvjad.homes%2Fmyindex.html%3F10a5fb457c0d9182ab4867824ce50261" --compressed 'https://api2.wanjd.cn/wxread/articles/tasks') data
+for i in {1..1}
+do
+  random=`expr $RANDOM % 10 + 8`
+  random1=$((random + 1))
+  echo $random
+  timestamp=$((timestamp + $random * 1000))
+  timestamp1=$((timestamp + $random * 1000 + 1000))
+  echo "现在时间$timestamp"
+
+  aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=f16c392c6d30f2f35661dfa6d3cb7b65&time=${timestamp}&psgn=3a2d4ac45b68bc52efe34123040d188e&v=3.0"
+  bb="https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=f16c392c6d30f2f35661dfa6d3cb7b65&time=${random1}&timestamp=${timestamp1}'"
+
+  # curl -H 'Host: nsr.zsf2023e458.cloud' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'origin: http://t1710000318s.gtbx3.shop' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'accept-language: zh-CN,zh-Hans;q=0.9' --compressed $aa
+  # sleep 8
+
+
+
+  sleep 1
+  echo "已循环${i}次"
+done
