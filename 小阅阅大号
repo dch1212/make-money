@@ -30,7 +30,7 @@ get_json_value $(curl -H 'Host: 1710037937.zhangyameng.top' -H 'Accept: applicat
 
 timestamp=`expr $(date +%s)`
 timestamp=$((timestamp * 1000))
-for i in {1..29}
+for i in {1..30}
 do
   random=`expr $RANDOM % 10 + 8`
   random1=$((random + 1))
