@@ -34,7 +34,7 @@ for i in {1..29}
 do
   random=`expr $RANDOM % 10 + 8`
   random1=$((random + 1))
-  echo $random
+  # echo $random
   timestamp=$((timestamp + $random * 1000))
   timestamp1=$((timestamp + $random * 1000 + 1000))
   # echo "现在时间$timestamp"
