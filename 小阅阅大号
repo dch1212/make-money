@@ -3,8 +3,7 @@ function get_json_value()
   local json=$1
   local key=$2
   local qqqq=domain
-echo $1
-echo $2
+
   if [[ -z "$3" ]]; then
     local num=1
   else
@@ -15,17 +14,17 @@ echo $2
 
   local value1=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${qqqq}'\042/){print $(i+2)}}}' | tr -d '"' | sed -n 1p)
 
-  echo "value$value"
-  echo "value1$value1"
+  # echo "value$value"
+  # echo "value1$value1"
   uk1=${value1#*uk=}
   uk=${uk1%%&*}
-  echo ${uk}
+  # echo ${uk}
 
   origin1=${value1#*\/}
   origin=${origin1%%\/yd*}
   origin2=${origin#*\/}
   origin3=${origin2%?}
-  echo ${origin3}
+  # echo ${origin3}
 }
 get_json_value $(curl -H 'Host: 1710037937.zhangyameng.top' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'X-Requested-With: XMLHttpRequest' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -H 'Origin: http://1710037937.zhangyameng.top' -H 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'Referer: http://1710037937.zhangyameng.top/' -H 'Cookie: ejectCode=1; ysmuid=e0c2d686160773376b50b8171875dad4' --data-binary "unionid=oZdBp0wsHCgPpxftQJ0Wi_fZv440" --compressed 'http://1710037937.zhangyameng.top/yunonline/v1/wtmpdomain2') data
 
@@ -42,8 +41,8 @@ do
   # uk='4a8835ea253f3270a3c96fe738ec1f3d'
   uk=${uk}
   origin=http://${origin3}
-  echo ${uk}
-  echo ${origin}
+  # echo ${uk}
+  # echo ${origin}
   aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=${uk}&time=${timestamp}&psgn=3a2d4ac45b68bc52efe34123040d188e&v=3.0"
   bb="https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=${uk}&time=${random1}&timestamp=${timestamp1}'"
 
@@ -58,5 +57,3 @@ do
 done
 
 # /bin/sh test.sh
-
-
