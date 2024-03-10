@@ -1,0 +1,61 @@
+function get_json_value()
+{
+  local json=$1
+  local key=$2
+  local qqqq=jump
+
+  if [[ -z "$3" ]]; then
+    local num=1
+  else
+    local num=$3
+  fi
+
+  local value=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${key}'\042/){print $(i+1)}}}' | tr -d '"' | sed -n ${num}p)
+
+  local value1=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${qqqq}'\042/){print $(i+2)}}}' | tr -d '"' | sed -n 1p)
+  echo "json$json"
+  echo "key$key"
+  echo "value$value"
+  echo "value1$value1"
+  # uk1=${value1#*?iu}
+  # uk=${uk1%%&*}
+
+  origin1=${value1#*\/}
+  origin=${origin1%%\/yd*}
+  origin2=${origin#*\/}
+  origin3=${origin2%?}
+  echo ${origin3}
+
+
+  iu1=${value1#*iu=}
+  iu=${iu1%%&*}
+  echo ${iu}
+
+
+}
+  get_json_value $(curl -H 'Host: h5319264.dbq7hvrq44.shop' -H 'Accept: */*' -H 'Cookie: PHPSESSID=9g8cgkd1t4ji1vlsfo2rlbcoiq' -H 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'X-Requested-With: XMLHttpRequest' --compressed 'http://h5319267.dbq7hvrq44.shop/read_task/gru') jump
+
+timestamp=`expr $(date +%s)`
+timestamp=$((timestamp * 1000))
+for i in {1..29}
+do
+  random=`expr $RANDOM % 10 + 8`
+  random1=$((random + 1))
+  echo $random
+  timestamp=$((timestamp + $random * 1000))
+  timestamp1=$((timestamp + $random * 1000 + 1000))
+  # uk=${uk}
+  # origin=http://${origin3}
+  # echo ${uk}
+  # echo ${origin}
+  # aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=${uk}&time=${timestamp}&psgn=3a2d4ac45b68bc52efe34123040d188e&v=3.0"
+  bb="http://u2004575.t03101749.0421060k.shop/read_task/do_read?iu=iuMjAwNDU3NQ2&type=7&pageshow&r=0.7984665290751174&jkey=${value}"
+
+  # get_json_value $(curl -H 'Host: u2004575.t03101810.ezy5x89xr3if.shop' -H 'Cookie: PHPSESSID=slrair2mig7pf5biada2fmr6ca' -H 'Accept: */*' -H 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'Referer: http://u2004575.t03101810.ezy5x89xr3if.shop/read_task/read?iu=iuMjAwNDU3NQ2&type=7' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'X-Requested-With: XMLHttpRequest' --compressed ${bb}) jkey
+
+  sleep $random
+
+  echo "已循环${i}次"
+done
+
+# /bin/sh test.sh
