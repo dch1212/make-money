@@ -1,0 +1,13 @@
+
+for i in {1..180}
+do
+  random=`expr $RANDOM % 7 + 1`
+  # random1=$((random + 1))
+
+  curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 101' -H 'limitCity: ' -H 'province: ' -H 'Cache-Control: no-cache' -H 'caid: f59a11565d30bfb7db90a392e4a3de78' -H 'User-Agent: chengyukaishuyuaniOS-mobile/1.0.1.0 CFNetwork/1399 Darwin/22.1.0' -H 'bs: undefined' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'appVersion: 1.0.1' -H 'ua: ' -H 'city: ' -H 'pkgId: 773' -H 'os: iOS' -H 'accessKey: 3ef3d3a381d7bbc585be15638558f3da_1810448570' -H 'deviceId: 000000-0000-0000-000000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: 1.0.1' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary '{"number":1}' --compressed 'https://bp-api.shinet.cn/g7-qzcyksy/game/sync/remove'
+
+  sleep $random
+  echo "已循环${i}次"
+done
+
+# /bin/sh test.sh
