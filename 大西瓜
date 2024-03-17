@@ -1,0 +1,12 @@
+
+for i in {1..180}
+do
+  random=`expr $RANDOM % 7 + 1`
+
+curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 100' -H 'Cache-Control: no-cache' -H 'caid: f59a11565d30bfb7db90a392e4a3de78' -H 'User-Agent: lgdxg-mobile/2 CFNetwork/1399 Darwin/22.1.0' -H 'bs: CDMA' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'hotVersion: 1.12' -H 'appVersion: 1.2' -H 'ua: ' -H 'romVersion: iOS16.10' -H 'wechatId: undefined' -H 'os: iOS' -H 'pkgId: 797' -H 'accessKey: 7ea66ad7a7829876b271f8954f705ac8_1814168777' -H 'deviceId: 0000-0000-0000-0000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: iOS16.10' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary "{}" --compressed 'https://bp-api.shinet.cn/g7-qzlgdxg/game/calculate/add/reward'
+
+  sleep $random
+  echo "已循环${i}次"
+done
+
+# /bin/sh test.sh
