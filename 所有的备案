@@ -1,0 +1,81 @@
+# function get_json_value()
+###
+ # @Author: pengen@xiaohongshu.com
+ # @Date: 2024-02-23 14:22:17
+ # @LastEditTime: 2024-03-17 22:52:28
+ # @Description: 简单描述
+ # @FilePath: /maha-rn/Users/duchengheng/Documents/test.sh
+ #  
+### 
+# {
+#   local json=$1
+#   local key=$2
+#   local qqqq=domain
+
+#   if [[ -z "$3" ]]; then
+#     local num=1
+#   else
+#     local num=$3
+#   fi
+
+#   local value=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${key}'\042/){print $(i+1)}}}' | tr -d '"' | sed -n ${num}p)
+
+#   local value1=$(echo "${json}" | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'${qqqq}'\042/){print $(i+2)}}}' | tr -d '"' | sed -n 1p)
+
+#   # echo "value$value"
+#   # echo "value1$value1"
+#   uk1=${value1#*uk=}
+#   uk=${uk1%%&*}
+#   # echo ${uk}
+
+#   origin1=${value1#*\/}
+#   origin=${origin1%%\/yd*}
+#   origin2=${origin#*\/}
+#   origin3=${origin2%?}
+#   # echo ${origin3}
+# }
+# get_json_value $(curl -H 'Host: 1710043839.zhangyameng.top' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'X-Requested-With: XMLHttpRequest' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -H 'Origin: http://1710043839.zhangyameng.top' -H 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2b) NetType/WIFI Language/zh_CN' -H 'Referer: http://1710043839.zhangyameng.top/?cate=0' -H 'Cookie: ejectCode=1; ysmuid=cbf71f72730821d1f455b6b08255bec4' --data-binary "unionid=oZdBp03Wpo5Dd4stKSx72XJN1h2k" --compressed 'http://1710043839.zhangyameng.top/yunonline/v1/wtmpdomain2') data
+
+# timestamp=`expr $(date +%s)`
+# timestamp=$((timestamp * 1000))
+# 西瓜600
+for i in {1..280}
+do
+  random=`expr $RANDOM % 5 + 1`
+  # random1=$((random + 1))
+  echo $random
+  # timestamp=$((timestamp + $random * 1000))
+  # timestamp1=$((timestamp + $random * 1000 + 1000))
+  # # echo "现在时间$timestamp"
+  # # uk='4a8835ea253f3270a3c96fe738ec1f3d'
+  # uk=${uk}
+  # origin=http://${origin3}
+  # # echo ${uk}
+  # # echo ${origin}
+  # aa="https://nsr.zsf2023e458.cloud/yunonline/v1/do_read?uk=${uk}&time=${timestamp}&psgn=3a2d4ac45b68bc52efe34123040d188e&v=3.0"
+  # bb="https://nsr.zsf2023e458.cloud/yunonline/v1/get_read_gold?uk=${uk}&time=${random1}&timestamp=${timestamp1}'"
+
+# 成语小号
+  curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 101' -H 'limitCity: ' -H 'province: ' -H 'Cache-Control: no-cache' -H 'caid: f59a11565d30bfb7db90a392e4a3de78' -H 'User-Agent: chengyukaishuyuaniOS-mobile/1.0.1.0 CFNetwork/1399 Darwin/22.1.0' -H 'bs: undefined' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'appVersion: 1.0.1' -H 'ua: ' -H 'city: ' -H 'pkgId: 773' -H 'os: iOS' -H 'accessKey: 3ef3d3a381d7bbc585be15638558f3da_1810448570' -H 'deviceId: 000000-0000-0000-000000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: 1.0.1' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary '{"number":1}' --compressed 'https://bp-api.shinet.cn/g7-qzcyksy/game/sync/remove'
+  # 小号通关
+  # curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 101' -H 'limitCity: ' -H 'province: ' -H 'Cache-Control: no-cache' -H 'caid: f59a11565d30bfb7db90a392e4a3de78' -H 'User-Agent: chengyukaishuyuaniOS-mobile/1.0.1.0 CFNetwork/1399 Darwin/22.1.0' -H 'bs: undefined' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'appVersion: 1.0.1' -H 'ua: ' -H 'city: ' -H 'pkgId: 773' -H 'os: iOS' -H 'accessKey: 3ef3d3a381d7bbc585be15638558f3da_1810448570' -H 'deviceId: 000000-0000-0000-000000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: 1.0.1' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary '{"type":0}' --compressed 'https://bp-api.shinet.cn/g7-qzcyksy/game/pass/screening'
+  # 成语大号
+  # curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 101' -H 'limitCity: ' -H 'province: ' -H 'Cache-Control: no-cache' -H 'caid: cdb471a8def1d4ecb91b22b2930276b3' -H 'User-Agent: chengyukaishuyuaniOS-mobile/1.0.1.0 CFNetwork/1402.0.8 Darwin/22.2.0' -H 'bs: undefined' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'appVersion: 1.0.1' -H 'ua: ' -H 'city: ' -H 'pkgId: 773' -H 'os: iOS' -H 'accessKey: 1e74f86f9c6daba534833766314873bf_1837744359' -H 'deviceId: 000000-0000-0000-000000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: 1.0.1' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary '{"number":1}' --compressed 'https://bp-api.shinet.cn/g7-qzcyksy/game/sync/remove'
+
+  # sleep $random
+# 大西瓜小号
+# curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 100' -H 'Cache-Control: no-cache' -H 'caid: f59a11565d30bfb7db90a392e4a3de78' -H 'User-Agent: lgdxg-mobile/2 CFNetwork/1399 Darwin/22.1.0' -H 'bs: CDMA' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'hotVersion: 1.12' -H 'appVersion: 1.2' -H 'ua: ' -H 'romVersion: iOS16.10' -H 'wechatId: undefined' -H 'os: iOS' -H 'pkgId: 797' -H 'accessKey: 7ea66ad7a7829876b271f8954f705ac8_1814168777' -H 'deviceId: 0000-0000-0000-0000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: iOS16.10' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary "{}" --compressed 'https://bp-api.shinet.cn/g7-qzlgdxg/game/calculate/add/reward'
+
+# 麻将小号
+# curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 100' -H 'Cache-Control: no-cache' -H 'caid: f59a11565d30bfb7db90a392e4a3de78' -H 'User-Agent: kxpyp-mobile/1.0 CFNetwork/1399 Darwin/22.1.0' -H 'bs: CDMA' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'hotVersion: 1.2' -H 'appVersion: 1.2' -H 'ua: ' -H 'romVersion: iOS16.10' -H 'wechatId: undefined' -H 'os: iOS' -H 'pkgId: 719' -H 'accessKey: 0cd048e2b26b8a7679bc2c216968b06e_1810448570' -H 'deviceId: 0000-0000-0000-0000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: iOS16.10' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary '{"number":1}' --compressed 'https://bp-api.shinet.cn/g7-qzkxpyp/game/sync/remove'
+
+# 麻将过关
+# curl -H 'Host: bp-api.shinet.cn' -H 'clientVersion: 100' -H 'Cache-Control: no-cache' -H 'caid: f59a11565d30bfb7db90a392e4a3de78' -H 'User-Agent: kxpyp-mobile/1.0 CFNetwork/1399 Darwin/22.1.0' -H 'bs: CDMA' -H 'isOcpc: 0' -H 'brand: Apple' -H 'channel: AppStore' -H 'hotVersion: 1.2' -H 'appVersion: 1.2' -H 'ua: ' -H 'romVersion: iOS16.10' -H 'wechatId: undefined' -H 'os: iOS' -H 'pkgId: 719' -H 'accessKey: 0cd048e2b26b8a7679bc2c216968b06e_1810448570' -H 'deviceId: 0000-0000-0000-0000' -H 'mac: ' -H 'oaid: undefined' -H 'Accept-Language: zh-CN,zh-Hans;q=0.9' -H 'model: ' -H 'osVersion: iOS16.10' -H 'Accept: */*' -H 'Content-Type: application/json' -H 'gps: default' --data-binary "{}" --compressed 'https://bp-api.shinet.cn/g7-qzkxpyp/game/pass/cp'
+
+
+
+  sleep $random
+  echo "已循环${i}次"
+done
+
+# /bin/sh test.sh
